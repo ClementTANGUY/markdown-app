@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
+
+//Importation de la librairie Marked afin de pouvoir écrire du markdown
 import marked from 'marked'
+
+//On importe notre "fichier source" qui permet d'intégrer du "seed"
 import { sampleText } from './sampleText'
 
 class App extends Component {
 
+// Notre fichier source fait office de State
   state = {
     text : sampleText
   }
 
-  // On se sert du "local storage" pour sauvegarder les modifications
+  // On se sert du "local storage" pour sauvegarder les modifications du state
   componentDidMount () {
     const text = localStorage.getItem('text')
     if (text) {
@@ -25,7 +30,7 @@ class App extends Component {
     localStorage.setItem('text', text)
   }
 
-  //Mise à jour en temps réel de la "textarea" par l'utilisateur
+  //Mise à jour en temps réel de la "textarea" par l'utilisateur grâce à une fonction
 
   handleChange = event => {
     const text = event.target.value
