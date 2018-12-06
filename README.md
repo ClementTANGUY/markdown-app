@@ -1,5 +1,5 @@
 Educative React app created by Anthony Welc https://www.youtube.com/channel/UChhPkjgG1-iLUOmURGdgQrw
-"Recepes box" allowing to log u to your pseudo thanks to a Facebook authentication and then CRUD recepes
+Allows u to convert your script in markdown
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
